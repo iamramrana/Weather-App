@@ -23,6 +23,7 @@ function App() {
     const resJson: IWeatherForecast = await response.json();
     let clickedSearchList = { ...clickedObj };
     setCurrentWeather(clickedSearchList);
+    //Getting forecast for the difference of 3 hours for the next 5 days so constructing data according to the need.
     let list: IForecastStepsList[] = [];
     if(resJson && resJson.list){
       resJson.list.forEach((item:any) => {
